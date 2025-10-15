@@ -152,9 +152,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // MÁSCARA DE TELEFONE: (00) 00000-0000
     if (inputTelefone) {
-        inputTelefone.addEventListener('input', function(e) {
-            let value = e.target.value.replace(/\D/g, ''); 
-            
+        inputTelefone.addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, '');
+
             // Limita a 11 dígitos (DDD + 9 dígitos)
             if (value.length > 11) {
                 value = value.substring(0, 11);
@@ -170,23 +170,23 @@ document.addEventListener('DOMContentLoaded', () => {
             if (value.length > 9) {
                 value = value.substring(0, 10) + '-' + value.substring(10);
             }
-            
+
             e.target.value = value;
         });
         // Define o limite máximo de caracteres (15 = (00) 00000-0000)
-        inputTelefone.setAttribute('maxlength', '15'); 
+        inputTelefone.setAttribute('maxlength', '15');
     }
 
     // MÁSCARA DE CPF: 000.000.000-00
     if (inputCpf) {
-        inputCpf.addEventListener('input', function(e) {
+        inputCpf.addEventListener('input', function (e) {
             let value = e.target.value.replace(/\D/g, '');
-            
+
             // Limita a 11 dígitos
             if (value.length > 11) {
                 value = value.substring(0, 11);
             }
-            
+
             // Aplica a formatação
             if (value.length > 3) {
                 value = value.substring(0, 3) + '.' + value.substring(3);
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (value.length > 9) {
                 value = value.substring(0, 11) + '-' + value.substring(9);
             }
-            
+
             e.target.value = value;
         });
         // Define o limite máximo de caracteres (14 = 000.000.000-00)
@@ -205,52 +205,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// botões do historico
 document.addEventListener('DOMContentLoaded', () => {
-    // --- 1. Funcionalidade de Filtro de Histórico ---
-    const filterButtons = document.querySelectorAll('.filtro-btn');
-    // Alvo: a classe historico-card (os itens de agendamento)
-    const historyCards = document.querySelectorAll('.historico-card'); 
+    const filtroBtns = document.querySelectorAll('.filtro-btn');
+    const historicoItems = document.querySelectorAll('.historico-item');
 
-    if (filterButtons.length > 0 && historyCards.length > 0) {
-        
-        // Função principal para filtrar os cards
-        const filterHistory = (filter) => {
-            historyCards.forEach(card => {
-                const status = card.getAttribute('data-status');
-                
-                // Se o filtro for 'todos' OU o status do card coincidir com o filtro
-                if (filter === 'todos' || status === filter) {
-                    card.classList.remove('hidden'); // Mostra o card
-                } else {
-                    card.classList.add('hidden'); // Esconde o card
-                }
-            });
-        };
+    function filtrarHistorico(filtro) {
+        historicoItems.forEach(item => {
+            const status = item.getAttribute('data-status');
 
-        // Adiciona o listener de clique em cada botão de filtro
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const filterValue = button.getAttribute('data-filter');
-
-                // 1. Remove a classe 'active' de todos os botões
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                
-                // 2. Adiciona a classe 'active' ao botão clicado
-                button.classList.add('active');
-
-                // 3. Chama a função de filtragem
-                filterHistory(filterValue);
-            });
+            if (filtro === 'todos' || status === filtro) {
+                item.style.display = 'block'; // Mostra o item
+            } else {
+                item.style.display = 'none'; // Esconde o item
+            }
         });
-
-        // Filtra inicialmente ao carregar a página (Garante que 'Todos' ou o filtro inicial seja aplicado)
-        const initialFilterButton = document.querySelector('.filtro-btn.active');
-        if (initialFilterButton) {
-            filterHistory(initialFilterButton.getAttribute('data-filter'));
-        }
     }
 
+    // Adiciona o evento de clique a todos os botões de filtro
+    filtroBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            const filtroSelecionado = this.getAttribute('data-filter');
+
+            // 1. Atualiza a classe 'active' nos botões
+            filtroBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+
+            // 2. Aplica o filtro
+            filtrarHistorico(filtroSelecionado);
+        });
+    });
+
+    filtrarHistorico('todos');
 });
 
 // Instalação do app

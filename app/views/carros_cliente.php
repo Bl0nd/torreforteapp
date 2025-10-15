@@ -21,7 +21,6 @@
                 <?php if (!empty($dados['veiculos'])): ?>
                     <?php foreach ($dados['veiculos'] as $veiculo): ?>
                         <div class="card-servico">
-                            <!-- <img src="#" alt="foto do veiculo"> -->
                             <p><strong>Placa:</strong> <?= $veiculo['placa_veiculo'] ?></p>
                             <p><strong>Modelo:</strong> <?= $veiculo['modelo_veiculo'] ?></p>
                             <p><strong>Cor:</strong> <?= $veiculo['cor_original_veiculo'] ?></p>
@@ -38,7 +37,6 @@
         </section>
 
         <section class="menu-meus-carros-fixo">
-            <!-- <a href="index.php?url=editar_carro">EDITAR</a> -->
             <a href="index.php?url=cadastrarcarro">CADASTRAR</a>
         </section>
 

@@ -37,7 +37,7 @@ class VeiculoController extends Controller
         $dados = [];
         $dados['titulo'] = "Meus Veículos";
 
-        if (empty($veiculos)) {
+        if (!isset($veiculos)) {
             $dados['veiculos'] = [];
             $dados['mensagem'] = "Nenhum veículo encontrado";
         } else {
