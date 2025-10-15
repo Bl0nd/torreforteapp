@@ -207,53 +207,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // botões do historico
 document.addEventListener('DOMContentLoaded', () => {
+    // --- 1. Funcionalidade de Filtro de Histórico ---
     const filterButtons = document.querySelectorAll('.filtro-btn');
-    // Agora selecionamos usando a nova classe 'historico-item'
-    const historyCards = document.querySelectorAll('.historico-item');
+    // Alvo: a classe historico-card (os itens de agendamento)
+    const historyCards = document.querySelectorAll('.historico-card'); 
 
-    // Se não houver botões ou cards, não faz nada
-    if (filterButtons.length === 0 || historyCards.length === 0) {
-        return;
+    if (filterButtons.length > 0 && historyCards.length > 0) {
+        
+        // Função principal para filtrar os cards
+        const filterHistory = (filter) => {
+            historyCards.forEach(card => {
+                const status = card.getAttribute('data-status');
+                
+                // Se o filtro for 'todos' OU o status do card coincidir com o filtro
+                if (filter === 'todos' || status === filter) {
+                    card.classList.remove('hidden'); // Mostra o card
+                } else {
+                    card.classList.add('hidden'); // Esconde o card
+                }
+            });
+        };
+
+        // Adiciona o listener de clique em cada botão de filtro
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filterValue = button.getAttribute('data-filter');
+
+                // 1. Remove a classe 'active' de todos os botões
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // 2. Adiciona a classe 'active' ao botão clicado
+                button.classList.add('active');
+
+                // 3. Chama a função de filtragem
+                filterHistory(filterValue);
+            });
+        });
+
+        // Filtra inicialmente ao carregar a página (Garante que 'Todos' ou o filtro inicial seja aplicado)
+        const initialFilterButton = document.querySelector('.filtro-btn.active');
+        if (initialFilterButton) {
+            filterHistory(initialFilterButton.getAttribute('data-filter'));
+        }
     }
 
-    // Função principal para filtrar os cards
-    const filterHistory = (filter) => {
-        historyCards.forEach(card => {
-            // SOLUÇÃO ROBUSTA: Pega o status do atributo data-status
-            const status = card.getAttribute('data-status');
-
-            // Lógica de filtragem:
-            // 1. Mostrar se o filtro for 'todos'
-            // 2. OU se o status encontrado coincidir com o valor do filtro
-            if (filter === 'todos' || status === filter) {
-                card.classList.remove('hidden'); // Mostra o card
-            } else {
-                card.classList.add('hidden'); // Esconde o card
-            }
-        });
-    };
-
-    // Adiciona o listener de clique em cada botão de filtro
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const filterValue = button.getAttribute('data-filter');
-
-            // 1. Atualiza o estado do botão (qual está ativo)
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-
-            // 2. Chama a função de filtragem
-            filterHistory(filterValue);
-        });
-    });
-
-    // Filtra inicialmente (garantindo que o filtro 'todos' ou inicial esteja aplicado)
-    const initialFilterButton = document.querySelector('.filtro-btn.active');
-    if (initialFilterButton) {
-        filterHistory(initialFilterButton.getAttribute('data-filter'));
-    }
 });
 
+// Instalação do app
 let deferredPrompt;
 const instalar = document.getElementById("instalar");
 const btnInstalar = document.getElementById('btnInstalar');

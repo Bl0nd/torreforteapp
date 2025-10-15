@@ -1001,34 +1001,22 @@ footer {
 /*#endregion 9 DETALHE ***************************************** */
 
 /*#region 10 CADASTRO CARRO ************************************ */
-/* #region 10.1 NOVO ESTILO CADASTRO CARRO (MODULARIZADO) */
 
-/*
- * 1. Estilo para o BODY (Sobrescreve o padding-top excessivo se necessário)
- * O estilo base do body_cadastro é mantido para o fundo.
- */
 .body_cadastro.page-cadastrar-carro {
-  /* Garante que o conteúdo não fique escondido atrás do header fixo */
   padding-top: 100px;
-  /* Garante centralização vertical para formulários curtos */
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
-/*
- * 2. Estilo para o CONTAINER (Nova classe para isolar o formulário)
- */
 .carro-container {
-  /* Estilos que replicam o tema escuro premium do LOGIN/PERFIL */
   background-color: rgba(15, 15, 15, 0.85);
   border: 3px solid #555;
   border-radius: 12px;
   padding: 30px 40px;
   width: 100%;
   max-width: 380px;
-  /* Largura padrão para formulários curtos */
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.9), inset 0 0 10px rgba(255, 255, 255, 0.1);
   text-align: center;
   position: relative;
@@ -1036,9 +1024,6 @@ footer {
   margin: 20px auto;
 }
 
-/*
- * 3. Estilo para o TÍTULO
- */
 .carro-container h2 {
   color: #EB9719;
   font-size: 2.2em;
@@ -1048,9 +1033,6 @@ footer {
   text-transform: uppercase;
 }
 
-/*
- * 4. Estilo para LABELS e FORM
- */
 .carro-form {
   display: flex;
   flex-direction: column;
@@ -1065,16 +1047,11 @@ footer {
   color: #C9B89F;
 }
 
-/*
- * 5. Estilo para CAMPOS DE ENTRADA (Input[text] e Select)
- * Usando a classe 'carro-input' para padronizar
- */
 .carro-form input[type="text"],
 .carro-form select {
   width: 100%;
   padding: 15px;
   margin-bottom: 5px;
-  /* Reduz margem para campos menores */
   border: 2px solid #444;
   border-radius: 6px;
   background-color: #222;
@@ -1084,12 +1061,10 @@ footer {
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-/* Placeholder */
 .carro-form input::placeholder {
   color: #888;
 }
 
-/* Foco nos campos */
 .carro-form input:focus,
 .carro-form select:focus {
   border-color: #EB9719;
@@ -1097,9 +1072,7 @@ footer {
   box-shadow: 0 0 5px #EB9719;
 }
 
-/* Estilo específico para o SELECT (corrigindo a seta) */
 .carro-form select {
-  /* Mantém consistência visual do select */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1109,9 +1082,6 @@ footer {
   background-size: 12px auto;
 }
 
-/*
- * 6. Estilo para o BOTÃO SALVAR (Nova classe para consistência)
- */
 .carro-form .btn-salvar-carro {
   width: 100%;
   padding: 15px;
@@ -1134,9 +1104,6 @@ footer {
 }
 
 
-/*
- * 7. Estilo para o BOTÃO VOLTAR
- */
 .body_cadastro.page-cadastrar-carro .btn-voltar {
   /* position: absolute; */
   top: 100px;
@@ -1160,8 +1127,6 @@ footer {
   background-color: rgba(235, 151, 25, 0.2);
   border-color: #EB9719;
 }
-
-/* #endregion 10.1 NOVO ESTILO CADASTRO CARRO (MODULARIZADO) */
 
 /*#endregion 10 CADASTRO CARRO ********************************* */
 
@@ -1307,25 +1272,17 @@ footer {
 
 /*#endregion 11 EDITAR CARRO ************************************ */
 
-/* #region 12.1 NOVOS ESTILOS PARA MEUS CARROS (MODULARIZADO) */
+/* #region 12 MEUS CARROS */
 
-/*
- * 1. Estilo para o BODY 
- * Usando a classe base body_menu, mas garantindo espaçamento ideal.
- */
 .body_menu.page-meus-carros {
-  /* Reduz o padding para puxar o conteúdo para baixo do header fixo (aprox. 100px) */
   padding-top: 100px;
-  /* Garante espaço suficiente para o footer (aprox. 80px) */
   padding-bottom: 80px;
   background-color: #121212;
 }
 
 .body_menu.page-meus-carros .btn-voltar {
   position: fixed;
-  /* Fixa o botão para que não desça com a rolagem */
   top: 110px;
-  /* Posicionado corretamente abaixo do header */
   left: 20px;
   color: #EB9719;
   background-color: rgba(23, 26, 24, 0.8);
@@ -1361,26 +1318,22 @@ footer {
 }
 
 .destaque__meus-carros {
-  /* Cria um layout responsivo de cards */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
   padding-bottom: 20px;
 }
 
-/* 3. MELHORIA NO CARD DO VEÍCULO */
 .destaque__meus-carros .card-servico {
   background-color: rgba(25, 25, 25, 0.9);
   border: 1px solid #333;
   border-left: 5px solid #EB9719;
-  /* Destaque lateral em laranja */
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s, box-shadow 0.3s;
   text-align: left;
   width: 100%;
-  /* Garante que o card preencha o grid */
 }
 
 .destaque__meus-carros .card-servico p {
@@ -1394,7 +1347,6 @@ footer {
   margin-right: 5px;
 }
 
-/* Destaque para o Status (último item de dados) */
 .destaque__meus-carros .card-servico p:nth-last-child(2) {
   font-weight: bold;
   color: #EB9719;
@@ -1403,7 +1355,6 @@ footer {
   margin-top: 10px;
 }
 
-/* Estilo do botão EDITAR dentro do card */
 .destaque__meus-carros .card-servico a {
   display: block;
   width: 80%;
@@ -1421,14 +1372,11 @@ footer {
   box-shadow: 0 3px #993300;
 }
 
-/* 4. POSICIONAMENTO E ESTILO DO BOTÃO CADASTRAR */
 .menu-meus-carros-fixo {
   position: fixed;
-  /* CORRIGIDO: 80px para subir acima do footer (50px) e o botão WhatsApp (30px) */
   bottom: 160px;
   right: 45%;
   left: auto;
-  /* Garante que flutue à direita */
   width: auto;
   padding: 0;
   background-color: transparent;
@@ -1436,7 +1384,6 @@ footer {
 }
 
 .menu-meus-carros-fixo a {
-  /* Estilo do botão flutuante premium */
   padding: 15px 30px;
   background: linear-gradient(to right, #ff9900 0%, #cc5500 100%);
   border-radius: 8px;
@@ -1454,8 +1401,7 @@ footer {
   box-shadow: 0 2px #993300;
 }
 
-
-/*#endregion 12 MEUS CARROS *********************************** */
+/*#endregion 12 MEUS CARROS */
 
 /* #region 13.1 NOVOS ESTILOS PARA AGENDAMENTOS (MODULARIZADO) */
 
@@ -1685,7 +1631,6 @@ footer {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  /* background-color: rgba(15, 15, 15, 0.7); */
 }
 
 .historico h2 {
@@ -1719,7 +1664,7 @@ footer {
   font-weight: bold;
   cursor: pointer;
   text-transform: uppercase;
-  transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, box-shadow 0.2s;
   flex-grow: 1;
   max-width: 150px;
 }
@@ -1730,34 +1675,90 @@ footer {
   box-shadow: 0 0 10px rgba(235, 151, 25, 0.7);
 }
 
-.historico>div:not(.historico-filtros) {
+.historico-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.historico-card {
   background-color: #1f2120;
   border: 1px solid #70787A;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   text-align: left;
-  margin-bottom: 20px;
-  transition: opacity 0.3s;
 }
 
-.historico>div:not(.historico-filtros).hidden {
+.historico-card.hidden {
   display: none;
 }
 
-.historico>div:not(.historico-filtros) p {
+.historico-card p {
   margin: 5px 0;
   font-size: 1em;
   color: #ffff;
 }
 
-.historico>div:not(.historico-filtros) p strong {
+.historico-card p strong {
   color: #C9B89F;
-  display: inline;
+  display: inline-block;
+  min-width: 120px;
 }
 
-.historico>div:not(.historico-filtros) p:nth-child(6) {
+.status-label {
+  padding: 3px 8px;
+  border-radius: 4px;
   font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.status-label-Concluido {
+  background-color: #388e3c;
+  color: #fff;
+}
+
+.status-label-Pendente {
+  background-color: #EB9719;
+  color: #171A18;
+}
+
+.status-label-Cancelado {
+  background-color: #d32f2f;
+  color: #fff;
+}
+
+.historico-card .card-acoes {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px dashed #70787A;
+  text-align: right;
+}
+
+.historico-card .btn-avaliar {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 15px;
+  background-color: #EB9719;
+  color: #171A18;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.historico-card .info-avaliado {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 15px;
+  background-color: #388e3c;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.9em;
 }
 
 /*#endregion 15 HISTÓRICO */
@@ -1846,3 +1847,110 @@ footer {
 }
 
 /*#endregion 16 REDEFINIR SENHA */
+
+/* #region 17 AVALIAR */
+
+.avaliar {
+  max-width: 600px;
+  margin: 100px auto 50px auto;
+  padding: 30px;
+  background-color: rgba(15, 15, 15, 0.7);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.avaliar h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8em;
+  border-bottom: 2px solid rgba(163, 126, 85, 0.3);
+  padding-bottom: 10px;
+}
+
+.btn-voltar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #fff;
+  font-size: 28px;
+  text-decoration: none;
+  padding: 5px;
+  transition: color 0.3s;
+  z-index: 1000;
+}
+
+.btn-voltar:hover {
+  color: #8D6B49;
+}
+
+.alerta-erro,
+.alerta-sucesso {
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.alerta-erro {
+  background-color: #f8d7da;
+  color: var(--error-color);
+  border: 1px solid var(--error-color);
+}
+
+.alerta-sucesso {
+  background-color: #d4edda;
+  color: var(--success-color);
+  border: 1px solid var(--success-color);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  resize: vertical;
+  font-size: 1em;
+}
+
+.avaliar p {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #EB9719;
+  font-style: italic;
+}
+
+.btn-principal {
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+  background: linear-gradient(to bottom, #ff9900 0%, #cc5500 100%);
+}
+
+.btn-principal i {
+  margin-right: 8px;
+}
+
+/* #endregion 17 AVALIAR */
