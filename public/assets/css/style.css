@@ -224,7 +224,6 @@ body#index_login {
   max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
-  /* Garante que o conteúdo não vaze */
 }
 
 .destaque__container {
@@ -328,7 +327,7 @@ body#index_login {
 
 /*#endregion 3 MENU  */
 
-/*#region 4 FOOTER  */
+/*#region 4 FOOTER */
 footer {
   position: fixed;
   bottom: 0;
@@ -375,34 +374,23 @@ footer {
 
 /*#endregion 4 FOOTER */
 
-/*#region 5 CADASTRO ******************************************* */
-/* #region 11.1 NOVOS ESTILOS PARA CADASTRO DE CLIENTE (MODULARIZADO) */
-
-/* * 1. Estilo para o BODY 
- * Usando a classe base body_cadastro, mas garantindo alinhamento ideal.
- */
+/*#region 5 CADASTRO */
 .body_cadastro.page-cadastro {
-  /* Garante centralização vertical para formulários de cadastro mais longos */
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  /* Garante que o conteúdo não fique escondido atrás do header fixo */
   padding-top: 100px;
 }
 
-/*
- * 2. Estilo para o CONTAINER (Nova classe para isolar o formulário)
- */
+
 .cadastro-container {
-  /* Estilos que replicam o tema escuro premium */
   background-color: rgba(15, 15, 15, 0.85);
   border: 3px solid #555;
   border-radius: 12px;
   padding: 30px 40px;
   width: 100%;
   max-width: 450px;
-  /* Largura levemente maior para formulários com muitos campos */
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.9), inset 0 0 10px rgba(255, 255, 255, 0.1);
   text-align: center;
   position: relative;
@@ -410,9 +398,6 @@ footer {
   margin: 20px auto;
 }
 
-/*
- * 3. Estilo para o TÍTULO
- */
 .cadastro-container h2 {
   color: #EB9719;
   font-size: 2.2em;
@@ -422,9 +407,7 @@ footer {
   text-transform: uppercase;
 }
 
-/*
- * 4. Estilo para LABELS e FORM
- */
+
 .cadastro-form {
   display: flex;
   flex-direction: column;
@@ -439,10 +422,7 @@ footer {
   color: #C9B89F;
 }
 
-/*
- * 5. Estilo para CAMPOS DE ENTRADA (Input[text], [email], [tel], [password])
- * Usando a classe 'cadastro-input' para padronizar todos os campos
- */
+
 .cadastro-form input[type="text"],
 .cadastro-form input[type="email"],
 .cadastro-form input[type="tel"],
@@ -459,21 +439,17 @@ footer {
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-/* Placeholder */
 .cadastro-form input::placeholder {
   color: #888;
 }
 
-/* Foco nos campos */
 .cadastro-form input:focus {
   border-color: #EB9719;
   outline: none;
   box-shadow: 0 0 5px #EB9719;
 }
 
-/*
- * 6. Estilo para o BOTÃO CRIAR CONTA (Nova classe para consistência)
- */
+
 .cadastro-form .btn-criar-conta {
   width: 100%;
   padding: 15px;
@@ -495,10 +471,9 @@ footer {
   box-shadow: 0 0 #993300;
 }
 
-/* #endregion 11.1 NOVOS ESTILOS PARA CADASTRO DE CLIENTE (MODULARIZADO) */
-/*#endregion 5 CADASTRO ************************************************ */
+/*#endregion 5 CADASTRO */
 
-/*#region 6 EDITAR CADASTRO ************************************ */
+/*#region 6 EDITAR CADASTRO  */
 
 .body_cadastro.page-editar-cadastro {
   /* Garante centralização vertical e ajuste para o header fixo */
@@ -643,7 +618,7 @@ footer {
 
 /*#endregion 6 EDITAR CADASTRO ********************************* */
 
-/*#region 7 PERFIL  */
+/*#region 7 PERFIL */
 .perfil {
   display: flex;
   flex-direction: column;
@@ -893,10 +868,9 @@ footer {
 
 /*#endregion 8 ESQUECEU SENHA */
 
-/*#region 9 DETALHE ******************************************** */
+/*#region 9 DETALHE  */
 
 .body_cadastro.page-detalhes-servico {
-  /* Mantém o fundo de login e centralização, mas ajusta o padding para o header fixo */
   padding-top: 100px;
   display: flex;
   justify-content: center;
@@ -904,18 +878,13 @@ footer {
   min-height: 100vh;
 }
 
-/*
- * 2. Estilo para o CONTAINER (Nova classe para isolar o conteúdo)
- */
 .servico-container {
-  /* Estilos que replicam o tema escuro premium */
   background-color: rgba(15, 15, 15, 0.85);
   border: 3px solid #555;
   border-radius: 12px;
   padding: 30px 40px;
   width: 100%;
   max-width: 500px;
-  /* Largura ligeiramente maior para a imagem */
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.9), inset 0 0 10px rgba(255, 255, 255, 0.1);
   text-align: center;
   position: relative;
@@ -924,9 +893,6 @@ footer {
   color: #e0e0e0;
 }
 
-/*
- * 3. Estilo para o TÍTULO
- */
 .servico-container h2 {
   color: #EB9719;
   font-size: 2.2em;
@@ -936,9 +902,6 @@ footer {
   text-transform: uppercase;
 }
 
-/*
- * 4. Estilo para a IMAGEM do Serviço
- */
 .detalhes-servico img {
   width: 100%;
   max-height: 250px;
@@ -949,9 +912,6 @@ footer {
   box-shadow: 0 0 15px rgba(235, 151, 25, 0.5);
 }
 
-/*
- * 5. Estilo para os PARÁGRAFOS de detalhes
- */
 .detalhes-servico p {
   text-align: left;
   margin: 15px 0;
@@ -961,22 +921,17 @@ footer {
 
 .detalhes-servico strong {
   color: #C9B89F;
-  /* Cor sutil para as etiquetas */
   font-weight: bold;
   margin-right: 5px;
 }
 
-/* Destaque para o preço */
 .detalhes-servico p:nth-child(3) strong {
   color: #ffaa33;
 }
 
-/* * 6. Estilo para o botão voltar (Ajustado para o novo padding-top) 
- */
 .body_cadastro.page-detalhes-servico .btn-voltar {
   /* position: absolute;
   top: 110px; */
-  /* Alinha com o novo padding-top do body */
   left: 20px;
   color: #EB9719;
   background-color: rgba(23, 26, 24, 0.8);
@@ -998,9 +953,9 @@ footer {
   border-color: #EB9719;
 }
 
-/*#endregion 9 DETALHE ***************************************** */
+/*#endregion 9 DETALHE */
 
-/*#region 10 CADASTRO CARRO ************************************ */
+/*#region 10 CADASTRO CARRO  */
 
 .body_cadastro.page-cadastrar-carro {
   padding-top: 100px;
@@ -1130,7 +1085,7 @@ footer {
 
 /*#endregion 10 CADASTRO CARRO ********************************* */
 
-/*#region 11 EDITAR CARRO ************************************** */
+/*#region 11 EDITAR CARRO  */
 
 .body_cadastro.page-editar-carro {
   /* Garante centralização vertical e horizontal */
@@ -1403,29 +1358,19 @@ footer {
 
 /*#endregion 12 MEUS CARROS */
 
-/* #region 13.1 NOVOS ESTILOS PARA AGENDAMENTOS (MODULARIZADO) */
+/* #region 13 AGENDAMENTOS */
 
-/*
- * 1. Estilo para o BODY (Sobrescreve o padding-top excessivo vindo de #8)
- * Mantém o fundo, mas ajusta o topo para o cabeçalho fixo.
- */
 .body_cadastro.page-agendamentos {
-  /* O estilo base do body_cadastro é mantido, mas ajustamos a margem/padding */
   padding-top: 100px;
 }
 
-/*
- * 2. Estilo para o CONTAINER (Nova classe para isolar o formulário)
- */
 .agendamentos-container {
-  /* Estilos do container de Login/Cadastro, mas específico para Agendamentos */
   background-color: rgba(15, 15, 15, 0.85);
   border: 3px solid #555;
   border-radius: 12px;
   padding: 30px 40px;
   width: 100%;
   max-width: 450px;
-  /* Largura otimizada para o formulário */
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.9), inset 0 0 10px rgba(255, 255, 255, 0.1);
   text-align: center;
   position: relative;
@@ -1433,9 +1378,6 @@ footer {
   margin: 20px auto;
 }
 
-/*
- * 3. Estilo para o TÍTULO
- */
 .agendamentos-container h2 {
   color: #EB9719;
   font-size: 2.2em;
@@ -1445,23 +1387,15 @@ footer {
   text-transform: uppercase;
 }
 
-/*
- * 4. Estilo para LABELS
- */
 .agendamentos-form label {
   display: block;
   text-align: left;
   margin: 15px 0 8px 0;
-  /* Espaçamento para separar os campos */
   font-size: 1em;
   font-weight: bold;
   color: #C9B89F;
 }
 
-/*
- * 5. Estilo para CAMPOS DE ENTRADA (Select, Textarea e Input[date])
- * Usa a classe .select existente, mas aprimorada para o contexto do agendamento
- */
 .agendamentos-form .select-field {
   width: 100%;
   padding: 15px;
@@ -1481,7 +1415,6 @@ footer {
   box-shadow: 0 0 5px #EB9719;
 }
 
-/* Estilo específico para o SELECT (corrigindo a seta) */
 .agendamentos-form select.select-field {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1492,21 +1425,16 @@ footer {
   background-size: 12px auto;
 }
 
-/* Estilo específico para o TEXTAREA */
 .agendamentos-form textarea.select-field {
   resize: vertical;
   min-height: 80px;
   max-height: 150px;
 }
 
-/* Placeholder */
 .agendamentos-form .select-field::placeholder {
   color: #888;
 }
 
-/*
- * 6. Estilo para o BOTÃO AGENDAR (Nova classe para consistência)
- */
 .agendamentos-form .btn-agendar {
   width: 100%;
   padding: 15px;
@@ -1528,13 +1456,9 @@ footer {
   box-shadow: 0 0 #993300;
 }
 
-/*
- * 7. Estilo para o BOTÃO VOLTAR (Mantido e ajustado para o topo)
- */
 .body_cadastro.page-agendamentos .btn-voltar {
   /* position: absolute;
   top: 100px; */
-  /* Ajuste para o topo da área de conteúdo */
   left: 20px;
   color: #EB9719;
   background-color: rgba(23, 26, 24, 0.8);
@@ -1556,7 +1480,7 @@ footer {
   border-color: #EB9719;
 }
 
-/* #endregion 13.1 NOVOS ESTILOS PARA AGENDAMENTOS (MODULARIZADO) */
+/* #endregion 13 AGENDAMENTOS */
 
 /*#region 14 SERVIÇOS */
 .servico {
