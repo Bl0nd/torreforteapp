@@ -1,0 +1,1848 @@
+/*#region 0 GLOBAL*/
+/* btn-voltar no topo de algumas páginas */
+.btn-voltar {
+  position: absolute;
+  top: 150px;
+  /* abaixo do header */
+  left: 1rem;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+  text-decoration: none;
+}
+
+.btn-voltar i {
+  font-size: 1.8rem;
+}
+
+/*#endregion 0 GLOBAL*/
+
+/*#region  HEADER  */
+.header {
+  /* background-color: rgba(0, 0, 0, 0.85);  */
+  width: 100%;
+  padding: 10px 0;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  text-align: center;
+}
+
+.header img {
+  display: block;
+  margin: 0 auto;
+}
+
+/*#endregion HEADER */
+
+/*#region LOGIN */
+body#index_login {
+  background: url('../img/fundoLogin.png') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: #e0e0e0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login {
+  background-color: rgba(15, 15, 15, 0.7);
+  border: 3px solid #555;
+  border-radius: 12px;
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9), inset 0 0 10px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.login h2 {
+  color: EB9719;
+  font-size: 2.2em;
+  margin-bottom: 25px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 8px EB9719, 0 0 15px rgba(255, 102, 0, 0.5);
+  text-transform: uppercase;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #444;
+  border-radius: 6px;
+  background-color: #222;
+  color: #fff;
+  font-size: 1em;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.login input::placeholder {
+  color: #888;
+}
+
+.login input:focus {
+  border-color: EB9719;
+  outline: none;
+  box-shadow: 0 0 5px EB9719;
+}
+
+.login .links {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  font-size: 0.9em;
+}
+
+.login .links a {
+  color: #ffff;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.login .links a:hover {
+  color: EB9719;
+}
+
+.login .btn-login {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to bottom, #ff9900 0%, #cc5500 100%);
+  border: 1px solid EB9719;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+  box-shadow: 0 5px #993300;
+}
+
+.login .btn-login:active {
+  transform: translateY(5px);
+  box-shadow: 0 0 #993300;
+}
+
+#instalar {
+  color: #ffff;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  max-width: 280px;
+  margin: 20px auto;
+  text-align: center;
+  border-left: 4px solid #EB9719;
+}
+
+#instalar p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #C9B89F;
+}
+
+#instalar div {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+#btnInstalar,
+#btnFechar {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#btnInstalar {
+  background-color: #EB9719;
+  color: #171A18;
+}
+
+#btnFechar {
+  background-color: transparent;
+  color: #70787A;
+  border: 1px solid #70787A;
+}
+
+/*#endregion LOGIN */
+
+/*#region 3 MENU  */
+.body_menu {
+  background-color: #171A18;
+  color: #ffff;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding-top: 160px;
+  padding-bottom: 100px;
+  min-height: 100vh;
+}
+
+.main-menu {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.destaque {
+  margin-bottom: 40px;
+}
+
+.destaque h2 {
+  color: #EB9719;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #EB9719;
+  letter-spacing: 1.5px;
+}
+
+.carousel-wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  /* Garante que o conteúdo não vaze */
+}
+
+.destaque__container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 10px;
+  gap: 30px;
+  padding: 0 10px 20px 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.destaque__container::-webkit-scrollbar {
+  display: none;
+}
+
+.card-servico {
+  flex: 0 0 350px;
+  width: 350px;
+  scroll-snap-align: start;
+  background-color: #1f2120;
+  border: 1px solid #70787A;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-servico a {
+  text-decoration: none;
+  color: #ffff;
+  display: block;
+}
+
+.card-servico img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+
+.card-servico h3 {
+  font-size: 1.2em;
+  padding: 15px 10px;
+  text-align: center;
+  color: #EB9719;
+  text-transform: uppercase;
+}
+
+.menu-navegacao {
+  margin-top: 50px;
+  background-color: #222524;
+  border: 1px solid #70787A;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.menu-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* flex-wrap: nowrap; */
+  justify-content: center;
+}
+
+.menu-lista a {
+  display: block;
+  width: 250px;
+  text-align: center;
+  margin: 8px 0;
+}
+
+.menu-lista li {
+  flex-shrink: 0;
+}
+
+.menu-lista a {
+  text-decoration: none;
+  color: #C9B89F;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 6px 15px;
+  border: 2px solid #171A18;
+  border-radius: 4px;
+  transition: color 0.3s, border-color 0.3s, background-color 0.3s, box-shadow 0.3s;
+  background-color: #1f2120;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.sair {
+  color: #EB9719 !important;
+}
+
+/*#endregion 3 MENU  */
+
+/*#region 4 FOOTER  */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f2120;
+  border-top: 1px solid #3d3e3e;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4);
+  height: 70px;
+  padding: 0 15px;
+}
+
+.footer-btn {
+  flex-grow: 1;
+  text-align: center;
+  text-decoration: none;
+  color: #EB9719ff;
+  font-size: 0.85em;
+  font-weight: 600;
+  padding: 15px 5px;
+}
+
+.btn-whatsapp {
+  position: relative;
+  top: -20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #25D366;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.5);
+}
+
+.btn-whatsapp i {
+  font-size: 2.2em;
+  color: #fff;
+}
+
+/*#endregion 4 FOOTER */
+
+/*#region 5 CADASTRO ******************************************* */
+/* #region 11.1 NOVOS ESTILOS PARA CADASTRO DE CLIENTE (MODULARIZADO) */
+
+/* * 1. Estilo para o BODY 
+ * Usando a classe base body_cadastro, mas garantindo alinhamento ideal.
+ */
+.body_cadastro.page-cadastro {
+  /* Garante centralização vertical para formulários de cadastro mais longos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* Garante que o conteúdo não fique escondido atrás do header fixo */
+  padding-top: 100px;
+}
+
+/*
+ * 2. Estilo para o CONTAINER (Nova classe para isolar o formulário)
+ */
+.cadastro-container {
+  /* Estilos que replicam o tema escuro premium */
+  background-color: rgba(15, 15, 15, 0.85);
+  border: 3px solid #555;
+  border-radius: 12px;
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 450px;
+  /* Largura levemente maior para formulários com muitos campos */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9), inset 0 0 10px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+/*
+ * 3. Estilo para o TÍTULO
+ */
+.cadastro-container h2 {
+  color: #EB9719;
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 8px #EB9719, 0 0 15px rgba(255, 102, 0, 0.5);
+  text-transform: uppercase;
+}
+
+/*
+ * 4. Estilo para LABELS e FORM
+ */
+.cadastro-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.cadastro-form label {
+  display: block;
+  text-align: left;
+  margin: 15px 0 8px 0;
+  font-size: 1em;
+  font-weight: bold;
+  color: #C9B89F;
+}
+
+/*
+ * 5. Estilo para CAMPOS DE ENTRADA (Input[text], [email], [tel], [password])
+ * Usando a classe 'cadastro-input' para padronizar todos os campos
+ */
+.cadastro-form input[type="text"],
+.cadastro-form input[type="email"],
+.cadastro-form input[type="tel"],
+.cadastro-form input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 5px;
+  border: 2px solid #444;
+  border-radius: 6px;
+  background-color: #222;
+  color: #fff;
+  font-size: 1em;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Placeholder */
+.cadastro-form input::placeholder {
+  color: #888;
+}
+
+/* Foco nos campos */
+.cadastro-form input:focus {
+  border-color: #EB9719;
+  outline: none;
+  box-shadow: 0 0 5px #EB9719;
+}
+
+/*
+ * 6. Estilo para o BOTÃO CRIAR CONTA (Nova classe para consistência)
+ */
+.cadastro-form .btn-criar-conta {
+  width: 100%;
+  padding: 15px;
+  margin-top: 30px;
+  background: linear-gradient(to bottom, #ff9900 0%, #cc5500 100%);
+  border: 1px solid #EB9719;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+  box-shadow: 0 5px #993300;
+}
+
+.cadastro-form .btn-criar-conta:active {
+  transform: translateY(5px);
+  box-shadow: 0 0 #993300;
+}
+
+/* #endregion 11.1 NOVOS ESTILOS PARA CADASTRO DE CLIENTE (MODULARIZADO) */
+/*#endregion 5 CADASTRO ************************************************ */
+
+/*#region 6 EDITAR CADASTRO ************************************ */
+
+.body_cadastro.page-editar-cadastro {
+  /* Garante centralização vertical e ajuste para o header fixo */
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/*
+ * 2. Estilo para o CONTAINER (Nova classe para isolar o formulário)
+ */
+.editar-container {
+  /* Estilos que replicam o tema escuro premium */
+  background-color: rgba(15, 15, 15, 0.85);
+  border: 3px solid #555;
+  border-radius: 12px;
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9), inset 0 0 10px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+/*
+ * 3. Estilo para o TÍTULO
+ */
+.editar-container h2 {
+  color: #EB9719;
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 8px #EB9719, 0 0 15px rgba(255, 102, 0, 0.5);
+  text-transform: uppercase;
+}
+
+/*
+ * 4. Estilo para LABELS e FORM
+ */
+.editar-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.editar-form label {
+  display: block;
+  text-align: left;
+  margin: 15px 0 8px 0;
+  font-size: 1em;
+  font-weight: bold;
+  color: #C9B89F;
+}
+
+/*
+ * 5. Estilo para CAMPOS DE ENTRADA (Input[text], [email], [tel])
+ */
+.editar-form input[type="text"],
+.editar-form input[type="email"],
+.editar-form input[type="tel"] {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 5px;
+  border: 2px solid #444;
+  border-radius: 6px;
+  background-color: #222;
+  color: #fff;
+  font-size: 1em;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Placeholder e valores de campo */
+.editar-form input::placeholder {
+  color: #888;
+}
+
+/* Foco nos campos */
+.editar-form input:focus {
+  border-color: #EB9719;
+  outline: none;
+  box-shadow: 0 0 5px #EB9719;
+}
+
+/*
+ * 6. Estilo para o BOTÃO SALVAR ALTERAÇÕES (Nova classe)
+ */
+.editar-form .btn-salvar-alteracoes {
+  width: 100%;
+  padding: 15px;
+  margin-top: 30px;
+  background: linear-gradient(to bottom, #ff9900 0%, #cc5500 100%);
+  border: 1px solid #EB9719;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+  box-shadow: 0 5px #993300;
+}
+
+.editar-form .btn-salvar-alteracoes:active {
+  transform: translateY(5px);
+  box-shadow: 0 0 #993300;
+}
+
+
+/*
+ * 7. Estilo para o BOTÃO VOLTAR (Ajustado para o novo padding-top)
+ */
+.body_cadastro.page-editar-cadastro .btn-voltar {
+  /* position: absolute;
+  top: 110px; */
+  /* Alinha com o novo padding-top do body */
+  left: 20px;
+  color: #EB9719;
+  background-color: rgba(23, 26, 24, 0.8);
+  border: 2px solid #70787A;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: background-color 0.3s, border-color 0.3s;
+  z-index: 10;
+}
+
+.body_cadastro.page-editar-cadastro .btn-voltar:hover {
+  background-color: rgba(235, 151, 25, 0.2);
+  border-color: #EB9719;
+}
+
+/*OBS: as configurações desta página estão no item 5 CADASTRO*/
+
+/*#endregion 6 EDITAR CADASTRO ********************************* */
+
+/*#region 7 PERFIL  */
+.perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(15, 15, 15, 0.95);
+  border: 3px solid #70787A;
+  border-radius: 12px;
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9), inset 0 0 10px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  margin: 20px auto;
+}
+
+.perfil h2 {
+  color: #EB9719;
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px #EB9719, 0 0 15px rgba(235, 151, 25, 0.5);
+  text-transform: uppercase;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 8px 0;
+  color: #f0f0f0;
+  font-size: 1em;
+}
+
+.info-item .label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #EB9719;
+  text-shadow: 0 0 5px rgba(235, 151, 25, 0.4);
+}
+
+.info-item .value {
+  color: #ffffff;
+  text-align: right;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.foto-container {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.foto-container img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #EB9719;
+  margin-bottom: 15px;
+  box-shadow: 0 0 15px rgba(235, 151, 25, 0.5);
+}
+
+.btn-foto-upload {
+  background-color: #EB9719;
+  color: #171A18;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.2s;
+  text-transform: uppercase;
+}
+
+.perfil form {
+  width: 100%;
+}
+
+.perfil label {
+  display: block;
+  text-align: left;
+  color: #C9B89F;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+.perfil input[readonly] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 2px solid #70787A;
+  background-color: #222524;
+  color: #ffff;
+  font-size: 1em;
+  box-sizing: border-box;
+  border-radius: 6px;
+  cursor: default;
+  opacity: 0.8;
+}
+
+.perfil a[href*="editarcadastro"] {
+  display: block;
+  /* width: 100%; */
+  padding: 15px;
+  margin-top: 30px;
+  text-decoration: none;
+  background: linear-gradient(to bottom, #EB9719 0%, #cc5500 100%);
+  border: 1px solid #EB9719;
+  border-radius: 8px;
+  color: #171A18;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 5px #944e0b;
+}
+
+/*#endregion 7 PERFIL  */
+
+/*#region 8 ESQUECEU SENHA */
+.body_cadastro {
+  background: url('../img/fundoLogin.png') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: #e0e0e0;
+  padding: 20px;
+  box-sizing: border-box;
+  padding-top: 160px;
+}
+
+.esqueci {
+  background-color: rgba(15, 15, 15, 0.7);
+  border: 3px solid #555;
+  border-radius: 12px;
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9), inset 0 0 10px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.esqueci h2 {
+  color: #EB9719;
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px #EB9719;
+  text-transform: uppercase;
+}
+
+.esqueci p {
+  color: #ffff;
+  font-size: 1em;
+  margin-bottom: 25px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.esqueci label {
+  display: block;
+  text-align: left;
+  color: #ff9900;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.esqueci input[type="email"] {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 25px;
+  border: 2px solid #444;
+  border-radius: 6px;
+  background-color: #222;
+  color: #fff;
+  font-size: 1em;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.esqueci input:focus {
+  border-color: EB9719;
+  outline: none;
+  box-shadow: 0 0 5px EB9719;
+}
+
+.esqueci .mensagem-sucesso {
+  color: #4CAF50;
+  font-weight: bold;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  background-color: rgba(0, 50, 0, 0.5);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.esqueci .btn-login {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to bottom, #ff9900 0%, #cc5500 100%);
+  border: 1px solid EB9719;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+  box-shadow: 0 5px #EB9719;
+}
+
+.esqueci .btn-login:active {
+  transform: translateY(5px);
+  box-shadow: 0 0 #C9B89F;
+}
+
+.esqueci .retornar {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #171A18;
+}
+
+.esqueci .retornar a {
+  color: #70787A;
+  text-decoration: none;
+  font-size: 0.95em;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: color 0.3s, text-shadow 0.3s;
+  display: inline-block;
+}
+
+/*#endregion 8 ESQUECEU SENHA */
+
+/*#region 9 DETALHE ******************************************** */
+
+.body_cadastro.page-detalhes-servico {
+  /* Mantém o fundo de login e centralização, mas ajusta o padding para o header fixo */
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/*
+ * 2. Estilo para o CONTAINER (Nova classe para isolar o conteúdo)
+ */
+.servico-container {
+  /* Estilos que replicam o tema escuro premium */
+  background-color: rgba(15, 15, 15, 0.85);
+  border: 3px solid #555;
+  border-radius: 12px;
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 500px;
+  /* Largura ligeiramente maior para a imagem */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9), inset 0 0 10px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto;
+  color: #e0e0e0;
+}
+
+/*
+ * 3. Estilo para o TÍTULO
+ */
+.servico-container h2 {
+  color: #EB9719;
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 8px #EB9719, 0 0 15px rgba(255, 102, 0, 0.5);
+  text-transform: uppercase;
+}
+
+/*
+ * 4. Estilo para a IMAGEM do Serviço
+ */
+.detalhes-servico img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 3px solid #EB9719;
+  box-shadow: 0 0 15px rgba(235, 151, 25, 0.5);
+}
+
+/*
+ * 5. Estilo para os PARÁGRAFOS de detalhes
+ */
+.detalhes-servico p {
+  text-align: left;
+  margin: 15px 0;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.detalhes-servico strong {
+  color: #C9B89F;
+  /* Cor sutil para as etiquetas */
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* Destaque para o preço */
+.detalhes-servico p:nth-child(3) strong {
+  color: #ffaa33;
+}
+
+/* * 6. Estilo para o botão voltar (Ajustado para o novo padding-top) 
+ */
+.body_cadastro.page-detalhes-servico .btn-voltar {
+  /* position: absolute;
+  top: 110px; */
+  /* Alinha com o novo padding-top do body */
+  left: 20px;
+  color: #EB9719;
+  background-color: rgba(23, 26, 24, 0.8);
+  border: 2px solid #70787A;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: background-color 0.3s, border-color 0.3s;
+  z-index: 10;
+}
+
+.body_cadastro.page-detalhes-servico .btn-voltar:hover {
+  background-color: rgba(235, 151, 25, 0.2);
+  border-color: #EB9719;
+}
+
+/*#endregion 9 DETALHE ***************************************** */
+
+/*#region 10 CADASTRO CARRO ************************************ */
+/* #region 10.1 NOVO ESTILO CADASTRO CARRO (MODULARIZADO) */
+
+/*
+ * 1. Estilo para o BODY (Sobrescreve o padding-top excessivo se necessário)
+ * O estilo base do body_cadastro é mantido para o fundo.
+ */
+.body_cadastro.page-cadastrar-carro {
+  /* Garante que o conteúdo não fique escondido atrás do header fixo */
+  padding-top: 100px;
+  /* Garante centralização vertical para formulários curtos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/*
+ * 2. Estilo para o CONTAINER (Nova classe para isolar o formulário)
+ */
+.carro-container {
+  /* Estilos que replicam o tema escuro premium do LOGIN/PERFIL */
+  background-color: rgba(15, 15, 15, 0.85);
+  border: 3px solid #555;
+  border-radius: 12px;
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 380px;
+  /* Largura padrão para formulários curtos */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9), inset 0 0 10px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+/*
+ * 3. Estilo para o TÍTULO
+ */
+.carro-container h2 {
+  color: #EB9719;
+  font-size: 2.2em;
+  margin-bottom: 25px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 8px #EB9719, 0 0 15px rgba(255, 102, 0, 0.5);
+  text-transform: uppercase;
+}
+
+/*
+ * 4. Estilo para LABELS e FORM
+ */
+.carro-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.carro-form label {
+  display: block;
+  text-align: left;
+  margin: 15px 0 8px 0;
+  font-size: 1em;
+  font-weight: bold;
+  color: #C9B89F;
+}
+
+/*
+ * 5. Estilo para CAMPOS DE ENTRADA (Input[text] e Select)
+ * Usando a classe 'carro-input' para padronizar
+ */
+.carro-form input[type="text"],
+.carro-form select {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 5px;
+  /* Reduz margem para campos menores */
+  border: 2px solid #444;
+  border-radius: 6px;
+  background-color: #222;
+  color: #fff;
+  font-size: 1em;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Placeholder */
+.carro-form input::placeholder {
+  color: #888;
+}
+
+/* Foco nos campos */
+.carro-form input:focus,
+.carro-form select:focus {
+  border-color: #EB9719;
+  outline: none;
+  box-shadow: 0 0 5px #EB9719;
+}
+
+/* Estilo específico para o SELECT (corrigindo a seta) */
+.carro-form select {
+  /* Mantém consistência visual do select */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2069a19.7%2019.7%200%200%200-14%205.8L146%20188%2019.5%2075a19.7%2019.7%200%200%200-28%2028l133.5%20133.4a19.7%2019.7%200%200%200%2028%200L287%20103a19.7%2019.7%200%200%200%200-28%2019.7%2019.7%200%200%200-14-6z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  background-size: 12px auto;
+}
+
+/*
+ * 6. Estilo para o BOTÃO SALVAR (Nova classe para consistência)
+ */
+.carro-form .btn-salvar-carro {
+  width: 100%;
+  padding: 15px;
+  margin-top: 30px;
+  background: linear-gradient(to bottom, #ff9900 0%, #cc5500 100%);
+  border: 1px solid #EB9719;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+  box-shadow: 0 5px #993300;
+}
+
+.carro-form .btn-salvar-carro:active {
+  transform: translateY(5px);
+  box-shadow: 0 0 #993300;
+}
+
+
+/*
+ * 7. Estilo para o BOTÃO VOLTAR
+ */
+.body_cadastro.page-cadastrar-carro .btn-voltar {
+  /* position: absolute; */
+  top: 100px;
+  left: 20px;
+  color: #EB9719;
+  background-color: rgba(23, 26, 24, 0.8);
+  border: 2px solid #70787A;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: background-color 0.3s, border-color 0.3s;
+  z-index: 10;
+}
+
+.body_cadastro.page-cadastrar-carro .btn-voltar:hover {
+  background-color: rgba(235, 151, 25, 0.2);
+  border-color: #EB9719;
+}
+
+/* #endregion 10.1 NOVO ESTILO CADASTRO CARRO (MODULARIZADO) */
+
+/*#endregion 10 CADASTRO CARRO ********************************* */
+
+/*#region 11 EDITAR CARRO ************************************** */
+
+.body_cadastro.page-editar-carro {
+  /* Garante centralização vertical e horizontal */
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Alinha o botão voltar abaixo do header fixo */
+.body_cadastro.page-editar-carro .btn-voltar {
+  /* position: absolute;
+  top: 110px; */
+  left: 20px;
+  color: #EB9719;
+  background-color: rgba(23, 26, 24, 0.8);
+  border: 2px solid #70787A;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: background-color 0.3s, border-color 0.3s;
+  z-index: 10;
+}
+
+/*
+ * 2. Estilo para o CONTAINER (Nova classe para isolar)
+ */
+.editar-carro-container {
+  /* Replica os estilos de formulário dark mode */
+  background-color: rgba(15, 15, 15, 0.85);
+  border: 3px solid #555;
+  border-radius: 12px;
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9), inset 0 0 10px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+/*
+ * 3. Estilo para o TÍTULO
+ */
+.editar-carro-container h2 {
+  color: #EB9719;
+  font-size: 2.2em;
+  margin-bottom: 25px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 8px #EB9719, 0 0 15px rgba(255, 102, 0, 0.5);
+  text-transform: uppercase;
+}
+
+/*
+ * 4. Estilo para LABELS e FORM
+ */
+.editar-carro-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.editar-carro-form label {
+  display: block;
+  text-align: left;
+  margin: 15px 0 8px 0;
+  font-size: 1em;
+  font-weight: bold;
+  color: #C9B89F;
+}
+
+/*
+ * 5. Estilo para CAMPOS DE ENTRADA (Input[text] e Select)
+ */
+.editar-carro-form input[type="text"],
+.editar-carro-form select {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 5px;
+  border: 2px solid #444;
+  border-radius: 6px;
+  background-color: #222;
+  color: #fff;
+  font-size: 1em;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Foco nos campos */
+.editar-carro-form input:focus,
+.editar-carro-form select:focus {
+  border-color: #EB9719;
+  outline: none;
+  box-shadow: 0 0 5px #EB9719;
+}
+
+/* Estilo específico para o SELECT (corrigindo a seta) */
+.editar-carro-form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2069a19.7%2019.7%200%200%200-14%205.8L146%20188%2019.5%2075a19.7%2019.7%200%200%200-28%2028l133.5%20133.4a19.7%2019.7%200%200%200%2028%200L287%20103a19.7%2019.7%200%200%200%200-28%2019.7%2019.7%200%200%200-14-6z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  background-size: 12px auto;
+}
+
+/*
+ * 6. Estilo para o BOTÃO SALVAR (Nova classe para consistência)
+ */
+.editar-carro-form .btn-salvar-edicao {
+  width: 100%;
+  padding: 15px;
+  margin-top: 30px;
+  background: linear-gradient(to bottom, #ff9900 0%, #cc5500 100%);
+  border: 1px solid #EB9719;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+  box-shadow: 0 5px #993300;
+}
+
+.editar-carro-form .btn-salvar-edicao:active {
+  transform: translateY(5px);
+  box-shadow: 0 0 #993300;
+}
+
+/*OBS: utilizada a mesma estrutura CSS do CADASTRO CARRO*/
+
+/*#endregion 11 EDITAR CARRO ************************************ */
+
+/* #region 12.1 NOVOS ESTILOS PARA MEUS CARROS (MODULARIZADO) */
+
+/*
+ * 1. Estilo para o BODY 
+ * Usando a classe base body_menu, mas garantindo espaçamento ideal.
+ */
+.body_menu.page-meus-carros {
+  /* Reduz o padding para puxar o conteúdo para baixo do header fixo (aprox. 100px) */
+  padding-top: 100px;
+  /* Garante espaço suficiente para o footer (aprox. 80px) */
+  padding-bottom: 80px;
+  background-color: #121212;
+}
+
+.body_menu.page-meus-carros .btn-voltar {
+  position: fixed;
+  /* Fixa o botão para que não desça com a rolagem */
+  top: 110px;
+  /* Posicionado corretamente abaixo do header */
+  left: 20px;
+  color: #EB9719;
+  background-color: rgba(23, 26, 24, 0.8);
+  border: 2px solid #70787A;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: background-color 0.3s, border-color 0.3s;
+  z-index: 100;
+}
+
+.body_menu.page-meus-carros .destaque {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.body_menu.page-meus-carros .destaque h2 {
+  color: #EB9719;
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 8px rgba(235, 151, 25, 0.4);
+  text-transform: uppercase;
+  border-bottom: 2px solid #EB9719;
+  padding-bottom: 10px;
+}
+
+.destaque__meus-carros {
+  /* Cria um layout responsivo de cards */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+/* 3. MELHORIA NO CARD DO VEÍCULO */
+.destaque__meus-carros .card-servico {
+  background-color: rgba(25, 25, 25, 0.9);
+  border: 1px solid #333;
+  border-left: 5px solid #EB9719;
+  /* Destaque lateral em laranja */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left;
+  width: 100%;
+  /* Garante que o card preencha o grid */
+}
+
+.destaque__meus-carros .card-servico p {
+  margin: 5px 0;
+  font-size: 1em;
+}
+
+.destaque__meus-carros .card-servico strong {
+  color: #C9B89F;
+  font-weight: normal;
+  margin-right: 5px;
+}
+
+/* Destaque para o Status (último item de dados) */
+.destaque__meus-carros .card-servico p:nth-last-child(2) {
+  font-weight: bold;
+  color: #EB9719;
+  padding-top: 10px;
+  border-top: 1px dashed #333;
+  margin-top: 10px;
+}
+
+/* Estilo do botão EDITAR dentro do card */
+.destaque__meus-carros .card-servico a {
+  display: block;
+  width: 80%;
+  padding: 10px;
+  margin-top: 15px;
+  background: linear-gradient(to bottom, #ff9900 0%, #cc5500 100%);
+  border: none;
+  border-radius: 6px;
+  color: #121212;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 3px #993300;
+}
+
+/* 4. POSICIONAMENTO E ESTILO DO BOTÃO CADASTRAR */
+.menu-meus-carros-fixo {
+  position: fixed;
+  /* CORRIGIDO: 80px para subir acima do footer (50px) e o botão WhatsApp (30px) */
+  bottom: 160px;
+  right: 45%;
+  left: auto;
+  /* Garante que flutue à direita */
+  width: auto;
+  padding: 0;
+  background-color: transparent;
+  z-index: 990;
+}
+
+.menu-meus-carros-fixo a {
+  /* Estilo do botão flutuante premium */
+  padding: 15px 30px;
+  background: linear-gradient(to right, #ff9900 0%, #cc5500 100%);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 5px #993300;
+  transition: all 0.2s;
+}
+
+.menu-meus-carros-fixo a:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px #993300;
+}
+
+
+/*#endregion 12 MEUS CARROS *********************************** */
+
+/* #region 13.1 NOVOS ESTILOS PARA AGENDAMENTOS (MODULARIZADO) */
+
+/*
+ * 1. Estilo para o BODY (Sobrescreve o padding-top excessivo vindo de #8)
+ * Mantém o fundo, mas ajusta o topo para o cabeçalho fixo.
+ */
+.body_cadastro.page-agendamentos {
+  /* O estilo base do body_cadastro é mantido, mas ajustamos a margem/padding */
+  padding-top: 100px;
+}
+
+/*
+ * 2. Estilo para o CONTAINER (Nova classe para isolar o formulário)
+ */
+.agendamentos-container {
+  /* Estilos do container de Login/Cadastro, mas específico para Agendamentos */
+  background-color: rgba(15, 15, 15, 0.85);
+  border: 3px solid #555;
+  border-radius: 12px;
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 450px;
+  /* Largura otimizada para o formulário */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9), inset 0 0 10px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+/*
+ * 3. Estilo para o TÍTULO
+ */
+.agendamentos-container h2 {
+  color: #EB9719;
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 8px #EB9719, 0 0 15px rgba(255, 102, 0, 0.5);
+  text-transform: uppercase;
+}
+
+/*
+ * 4. Estilo para LABELS
+ */
+.agendamentos-form label {
+  display: block;
+  text-align: left;
+  margin: 15px 0 8px 0;
+  /* Espaçamento para separar os campos */
+  font-size: 1em;
+  font-weight: bold;
+  color: #C9B89F;
+}
+
+/*
+ * 5. Estilo para CAMPOS DE ENTRADA (Select, Textarea e Input[date])
+ * Usa a classe .select existente, mas aprimorada para o contexto do agendamento
+ */
+.agendamentos-form .select-field {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #444;
+  border-radius: 6px;
+  background-color: #222;
+  color: #fff;
+  font-size: 1em;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.agendamentos-form .select-field:focus {
+  border-color: #EB9719;
+  outline: none;
+  box-shadow: 0 0 5px #EB9719;
+}
+
+/* Estilo específico para o SELECT (corrigindo a seta) */
+.agendamentos-form select.select-field {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2069a19.7%2019.7%200%200%200-14%205.8L146%20188%2019.5%2075a19.7%2019.7%200%200%200-28%2028l133.5%20133.4a19.7%2019.7%200%200%200%2028%200L287%20103a19.7%2019.7%200%200%200%200-28%2019.7%2019.7%200%200%200-14-6z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  background-size: 12px auto;
+}
+
+/* Estilo específico para o TEXTAREA */
+.agendamentos-form textarea.select-field {
+  resize: vertical;
+  min-height: 80px;
+  max-height: 150px;
+}
+
+/* Placeholder */
+.agendamentos-form .select-field::placeholder {
+  color: #888;
+}
+
+/*
+ * 6. Estilo para o BOTÃO AGENDAR (Nova classe para consistência)
+ */
+.agendamentos-form .btn-agendar {
+  width: 100%;
+  padding: 15px;
+  margin-top: 30px;
+  background: linear-gradient(to bottom, #ff9900 0%, #cc5500 100%);
+  border: 1px solid #EB9719;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+  box-shadow: 0 5px #993300;
+}
+
+.agendamentos-form .btn-agendar:active {
+  transform: translateY(5px);
+  box-shadow: 0 0 #993300;
+}
+
+/*
+ * 7. Estilo para o BOTÃO VOLTAR (Mantido e ajustado para o topo)
+ */
+.body_cadastro.page-agendamentos .btn-voltar {
+  /* position: absolute;
+  top: 100px; */
+  /* Ajuste para o topo da área de conteúdo */
+  left: 20px;
+  color: #EB9719;
+  background-color: rgba(23, 26, 24, 0.8);
+  border: 2px solid #70787A;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: background-color 0.3s, border-color 0.3s;
+  z-index: 10;
+}
+
+.body_cadastro.page-agendamentos .btn-voltar:hover {
+  background-color: rgba(235, 151, 25, 0.2);
+  border-color: #EB9719;
+}
+
+/* #endregion 13.1 NOVOS ESTILOS PARA AGENDAMENTOS (MODULARIZADO) */
+
+/*#region 14 SERVIÇOS */
+.servico {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
+.servico h2 {
+  grid-column: 1 / -1;
+  color: #EB9719;
+  font-size: 2.2em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #BA9272;
+  letter-spacing: 2px;
+}
+
+.servico a {
+  text-decoration: none;
+  color: #ffff;
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  background-color: #1f2120;
+  border: 1px solid #70787A;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.servico img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  opacity: 0.9;
+}
+
+.servico h3 {
+  font-size: 13px;
+  padding: 10px 10px;
+  text-align: center;
+  color: #EB9719;
+  text-transform: uppercase;
+}
+
+.servico p {
+  grid-column: 1 / -1;
+  color: #C9B89F;
+  text-align: center;
+  padding: 30px;
+  border: 1px dashed #70787A;
+  margin-top: 20px;
+  background-color: #222524;
+  width: 100%;
+  max-width: 600px;
+  justify-self: center;
+}
+
+/*#endregion 14 SERVIÇOS* */
+
+/*#region 15 HISTÓRICO */
+.historico {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  /* background-color: rgba(15, 15, 15, 0.7); */
+}
+
+.historico h2 {
+  color: #EB9719;
+  font-size: 2.2em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #BA9272;
+  letter-spacing: 2px;
+}
+
+.historico-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: #222524;
+  border-radius: 8px;
+}
+
+.filtro-btn {
+  background-color: #70787A;
+  color: #171A18;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.2s, color 0.2s;
+  flex-grow: 1;
+  max-width: 150px;
+}
+
+.filtro-btn.active {
+  background-color: #EB9719;
+  color: #171A18;
+  box-shadow: 0 0 10px rgba(235, 151, 25, 0.7);
+}
+
+.historico>div:not(.historico-filtros) {
+  background-color: #1f2120;
+  border: 1px solid #70787A;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  text-align: left;
+  margin-bottom: 20px;
+  transition: opacity 0.3s;
+}
+
+.historico>div:not(.historico-filtros).hidden {
+  display: none;
+}
+
+.historico>div:not(.historico-filtros) p {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #ffff;
+}
+
+.historico>div:not(.historico-filtros) p strong {
+  color: #C9B89F;
+  display: inline;
+}
+
+.historico>div:not(.historico-filtros) p:nth-child(6) {
+  font-weight: bold;
+}
+
+/*#endregion 15 HISTÓRICO */
+
+/*#region 16 REDEFINIR SENHA */
+.body_redefinir-senha {
+  background: url('../img/fundoLogin.png') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: #e0e0e0;
+  padding: 20px;
+  box-sizing: border-box;
+  padding-top: 160px;
+}
+
+.redefinir {
+  background-color: rgba(15, 15, 15, 0.7);
+  border: 3px solid #555;
+  border-radius: 12px;
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9), inset 0 0 10px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.redefinir h2 {
+  color: #EB9719;
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px #EB9719;
+  text-transform: uppercase;
+}
+
+.redefinir h3 {
+  padding: 10px 0px 30px 0px;
+  font-size: 15px;
+  color: #C9B89F;
+}
+
+.redefinir input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 25px;
+  border: 2px solid #444;
+  border-radius: 6px;
+  background-color: #222;
+  color: #fff;
+  font-size: 1em;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.redefinir input:focus {
+  border-color: EB9719;
+  outline: none;
+  box-shadow: 0 0 5px EB9719;
+}
+
+.redefinir .btnRedefinir {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to bottom, #ff9900 0%, #cc5500 100%);
+  border: 1px solid EB9719;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+  box-shadow: 0 5px #EB9719;
+}
+
+.redefinir .btnRedefinir:active {
+  transform: translateY(5px);
+  box-shadow: 0 0 #C9B89F;
+}
+
+/*#endregion 16 REDEFINIR SENHA */
