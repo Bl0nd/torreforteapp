@@ -32,11 +32,34 @@ class AvaliarController extends Controller
             'id_agendamento' => $idAgendamento,
         ];
 
+        // 3. Carregar a View (GET inicial ou reexibição após POST com erro)
+        // A view usará $_SESSION['erro'] e $_SESSION['sucesso'] para exibir feedback.
+        $this->carregarViews('avaliar', $dadosView);
+    }
+
+    public function postarAvaliacao($id)
+    {
+        if (!isset($_SESSION['token'])) {
+            header("Location: " . URL_BASE . "index.php?url=login");
+            exit;
+        }
+        $token = $_SESSION['token'];
+        $payload = AuxiliarToken::validar($token);
+
+        if (!$payload) {
+            session_destroy();
+            header("Location: " . URL_BASE . "index.php?url=login");
+            exit;
+        }
+
+        $id_cliente = $payload['id_cliente'] ?? $payload['id'] ?? null;
+
         // 2. Lógica para Processamento do Formulário (POST)
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $comentario = filter_input(INPUT_POST, 'comentario', FILTER_SANITIZE_SPECIAL_CHARS) ?? '';
             $erro_encontrado = false;
+            $idAgendamento = $_POST['id_agendamento'];
 
             if (empty($comentario)) {
                 $_SESSION['erro'] = 'O campo de comentário é obrigatório.';
@@ -49,7 +72,7 @@ class AvaliarController extends Controller
             if (!$erro_encontrado) {
                 $dadosAPI = [
                     'id_cliente' => $id_cliente,
-                    'id_agendamento' => $idAgendamento,
+                    'id_agendamento' => $id,
                     'comentario' => $comentario,
                 ];
 
@@ -65,7 +88,8 @@ class AvaliarController extends Controller
                 $response = curl_exec($ch);
                 $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
                 curl_close($ch);
-
+                // var_dump($response);
+                // exit;
                 $resultadoAPI = json_decode($response, true);
 
                 if (isset($resultadoAPI['sucesso']) && $resultadoAPI['sucesso'] === true) {
@@ -86,9 +110,5 @@ class AvaliarController extends Controller
                 // simplesmente continuamos para o passo 3. O usuário verá a mesma URL no navegador.
             }
         }
-
-        // 3. Carregar a View (GET inicial ou reexibição após POST com erro)
-        // A view usará $_SESSION['erro'] e $_SESSION['sucesso'] para exibir feedback.
-        $this->carregarViews('avaliar', $dadosView);
     }
 }
