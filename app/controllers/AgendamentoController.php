@@ -137,6 +137,7 @@ class AgendamentoController extends Controller
             exit;
         }
 
+
         $token = $_SESSION['token'];
 
         $payload = AuxiliarToken::validar($token);
@@ -152,6 +153,8 @@ class AgendamentoController extends Controller
             echo 'ID do cliente não encontrado';
             exit;
         }
+        $dados['id_agendamento'] = $id;
+        $dados['id_cliente'] = $idCliente;
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $url = API_BASE . 'CriarComentario';
@@ -177,6 +180,8 @@ class AgendamentoController extends Controller
             if ($httpCode === 200) {
                 $return = json_decode($response, true);
                 $dados['agendamento'] = $return;
+                header("Location: " . URL_BASE . "index.php?url=historico");
+                exit;
             } else {
                 $_SESSION['erro'] = "Agendamento não encontrado.";
                 header("Location: " . URL_BASE . "index.php?url=menu");

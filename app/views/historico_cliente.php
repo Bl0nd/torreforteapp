@@ -40,6 +40,10 @@
                                 }
                                 ?>
                             </p>
+
+                            <?php if ($historico['status_agendamento'] === 'Concluido'): ?>
+                                <a href="<?= URL_BASE; ?>index.php?url=agendamento/avaliar/<?= $historico['id_agendamento'] ?? 0 ?>" class="btn-avaliar"><i class="uil uil-star"></i> Avaliar Serviço</a>
+                            <?php endif; ?>
                         </div>
                     <?php endif; ?>
                 <?php endforeach; ?>

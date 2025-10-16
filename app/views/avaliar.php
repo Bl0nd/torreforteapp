@@ -22,16 +22,16 @@
                                         unset($_SESSION['sucesso']); ?></p>
         <?php endif; ?>
 
-        <form method="POST" action="<?= URL_BASE; ?>index.php?url=avaliar&acao=avaliar&id=<?= $dados['id_agendamento'] ?>">
+        <form method="POST" action="<?= URL_BASE; ?>index.php?url=agendamento/avaliar/<?= $id_agendamento;?>">
 
-            <input type="hidden" name="id_agendamento" value="<?= $dados['id_agendamento'] ?? '' ?>">
+            <input type="hidden" name="id_agendamento" value="<?= $idCliente ?? '' ?>">
 
             <div class="form-group">
                 <label for="comentario">Comentário sobre o Serviço:</label>
                 <textarea name="comentario" id="comentario" rows="5" class="form-control" required placeholder="Deixe seu feedback sobre o serviço concluído."></textarea>
             </div>
 
-            <a href="<?= URL_BASE; ?>index.php?url=avaliar&acao=index&id=<?= $idAgendamento ?>" class="btn-avaliar"><i class="uil uil-star"></i> Avaliar Serviço</a>
+            <button type="submit" class="btn-avaliar"><i class="uil uil-star"></i> Avaliar</button>
         </form>
     </section>
 
