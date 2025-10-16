@@ -3,7 +3,7 @@
 
 <?php require_once('template/head.php') ?>
 
-<body id="index_menu" class="body_menu">
+<body id="index_menu" class="body_cadastro">
 
     <?php require_once('template/header.php') ?>
 
@@ -16,6 +16,10 @@
 
         <section class="destaque">
             <h2>MEUS CARROS</h2>
+
+            <section class="menu-meus-carros-fixo">
+                <a href="index.php?url=cadastrarcarro"><img src="assets/img/add.png"></a>
+            </section>
 
             <div class="destaque__meus-carros">
                 <?php if (!empty($dados['veiculos'])): ?>
@@ -35,11 +39,6 @@
                 <?php endif; ?>
             </div>
         </section>
-
-        <section class="menu-meus-carros-fixo">
-            <a href="index.php?url=cadastrarcarro">CADASTRAR</a>
-        </section>
-
     </main>
 
     <?php require_once('template/footer.php') ?>
