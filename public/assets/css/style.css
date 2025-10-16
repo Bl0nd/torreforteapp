@@ -1567,7 +1567,7 @@ footer {
   margin-bottom: 40px;
   padding-bottom: 15px;
   border-bottom: 4px solid #BA9272;
-  letter-spacing: 3px;
+  /* letter-spacing: 3px; */
   font-weight: 800;
 }
 
