@@ -480,7 +480,6 @@ footer {
 /*#region 6 EDITAR CADASTRO  */
 
 .body_cadastro.page-editar-cadastro {
-  /* Garante centralização vertical e ajuste para o header fixo */
   padding-top: 100px;
   display: flex;
   justify-content: center;
@@ -488,11 +487,7 @@ footer {
   min-height: 100vh;
 }
 
-/*
- * 2. Estilo para o CONTAINER (Nova classe para isolar o formulário)
- */
 .editar-container {
-  /* Estilos que replicam o tema escuro premium */
   background-color: rgba(15, 15, 15, 0.85);
   border: 3px solid #555;
   border-radius: 12px;
@@ -506,9 +501,7 @@ footer {
   margin: 20px auto;
 }
 
-/*
- * 3. Estilo para o TÍTULO
- */
+
 .editar-container h2 {
   color: #EB9719;
   font-size: 2.2em;
@@ -518,9 +511,6 @@ footer {
   text-transform: uppercase;
 }
 
-/*
- * 4. Estilo para LABELS e FORM
- */
 .editar-form {
   display: flex;
   flex-direction: column;
@@ -535,9 +525,22 @@ footer {
   color: #C9B89F;
 }
 
-/*
- * 5. Estilo para CAMPOS DE ENTRADA (Input[text], [email], [tel])
- */
+.editar-btn {
+  width: 100%;
+  padding: 15px;
+  margin-top: 30px;
+  background: linear-gradient(to bottom, #ff9900 0%, #cc5500 100%);
+  border: 1px solid #EB9719;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+  box-shadow: 0 5px #993300;
+}
+
 .editar-form input[type="text"],
 .editar-form input[type="email"],
 .editar-form input[type="tel"] {
@@ -553,21 +556,16 @@ footer {
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-/* Placeholder e valores de campo */
 .editar-form input::placeholder {
   color: #888;
 }
 
-/* Foco nos campos */
 .editar-form input:focus {
   border-color: #EB9719;
   outline: none;
   box-shadow: 0 0 5px #EB9719;
 }
 
-/*
- * 6. Estilo para o BOTÃO SALVAR ALTERAÇÕES (Nova classe)
- */
 .editar-form .btn-salvar-alteracoes {
   width: 100%;
   padding: 15px;
@@ -590,13 +588,9 @@ footer {
 }
 
 
-/*
- * 7. Estilo para o BOTÃO VOLTAR (Ajustado para o novo padding-top)
- */
 .body_cadastro.page-editar-cadastro .btn-voltar {
   /* position: absolute;
   top: 110px; */
-  /* Alinha com o novo padding-top do body */
   left: 20px;
   color: #EB9719;
   background-color: rgba(23, 26, 24, 0.8);
@@ -617,8 +611,6 @@ footer {
   background-color: rgba(235, 151, 25, 0.2);
   border-color: #EB9719;
 }
-
-/*OBS: as configurações desta página estão no item 5 CADASTRO*/
 
 /*#endregion 6 EDITAR CADASTRO ********************************* */
 
