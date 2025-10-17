@@ -31,7 +31,7 @@
                             <p><strong>1º Dono:</strong> <?= strtolower($veiculo['primeiro_dono']) === 'sim' ? 'Sim' : 'Não' ?></p>
                             <p><strong>Status:</strong> <?= $veiculo['status_veiculo'] ?></p>
 
-                            <a href="<?= URL_BASE; ?>index.php?url=editarcarro&id=<?= $veiculo['id_veiculo'] ?>">EDITAR</a>
+                            <a href="<?= URL_BASE; ?>index.php?url=editarCarro&id=<?= $veiculo['id_veiculo'] ?>">EDITAR</a>
                         </div>
                     <?php endforeach; ?>
                 <?php else: ?>

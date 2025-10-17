@@ -33,7 +33,7 @@
             <ul class="menu-lista">
                 <li><a href="index.php?url=agendamento"> AGENDAMENTO</a></li>
                 <li><a href="index.php?url=servicos"> SERVIÇOS</a></li>
-                <li><a href="index.php?url=editarcadastro"> EDITAR DADOS</a></li>
+                <li><a href="index.php?url=editarCadastro"> EDITAR DADOS</a></li>
                 <li><a href="index.php?url=veiculo"> MEUS CARROS</a></li>
                 <li><a href="index.php?url=historico"> HISTÓRICO</a></li>
                 <li><a href="index.php?url=login/logout" class="sair">SAIR</a></li>

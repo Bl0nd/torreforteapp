@@ -21,7 +21,7 @@
     <section class="editar-container">
         <h2>EDITAR CADASTRO</h2>
 
-        <form class="editar-form" method="post" action="<?= URL_BASE ?>index.php?url=editarcadastro/salvar">
+        <form class="editar-form" method="post" action="<?= URL_BASE ?>index.php?url=editarCadastro/salvar">
             <?php if (!empty($dados['clientes'])): ?>
                 <label for="nome_cliente">Nome Completo:</label>
                 <input type="text" name="nome_cliente" id="nome_cliente" value="<?= $dados['clientes']['nome_cliente']; ?>" placeholder="Nome completo" required>

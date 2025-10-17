@@ -36,7 +36,7 @@
                 <span class="value"><?= $dados['cliente']['telefone_cliente']; ?></span>
             </div>
         <?php endif; ?>
-        <a class="editar-btn" href="index.php?url=editarcadastro">Editar Dados</a>
+        <a class="editar-btn" href="index.php?url=editarCadastro">Editar Dados</a>
     </section>
 
     <?php require_once('template/footer.php') ?>
