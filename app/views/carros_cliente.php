@@ -18,7 +18,7 @@
             <h2>MEUS CARROS</h2>
 
             <section class="menu-meus-carros-fixo">
-                <a href="index.php?url=cadastrarcarro"><img src="assets/img/add.png"></a>
+                <a href="index.php?url=cadastrarCarro"><img src="assets/img/add.png"></a>
             </section>
 
             <div class="destaque__meus-carros">
