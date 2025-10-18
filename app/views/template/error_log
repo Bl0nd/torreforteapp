@@ -1,0 +1,8 @@
+[18-Oct-2025 02:46:19 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Undefined constant "URL_BASE" in /home/alve6465/smpsistema/tipi03/agencia/frontdev/torreforte_app/app/views/template/head.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/alve6465/smpsistema/tipi03/agencia/frontdev/torreforte_app/app/views/template/head.php on line 4
+[18-Oct-2025 03:07:34 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Undefined constant "FOTO_BASE" in /home/alve6465/smpsistema/tipi03/agencia/frontdev/torreforte_app/app/views/template/header.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/alve6465/smpsistema/tipi03/agencia/frontdev/torreforte_app/app/views/template/header.php on line 2

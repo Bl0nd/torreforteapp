@@ -14,7 +14,7 @@
 
         <P>Informe o e-mail que foi utilizado no cadastro para enviarmos um link de recuperação.</P>
 
-        <form method="post" action="<?= URL_BASE ?>index.php?url=esqueceusenha/enviarLink">
+        <form method="post" action="<?= URL_BASE ?>index.php?url=esqueceuSenha/enviarLink">
 
             <label for="email">E-mail:</label>
             <input type="email" name="email_cliente" id="email_cliente" data-tts="email" class="bi bi-envelope" placeholder="seuemail@aqui.com" required>

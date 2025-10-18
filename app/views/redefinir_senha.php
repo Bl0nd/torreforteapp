@@ -20,6 +20,7 @@
             <input type="hidden" name="token" value="<?= $token ?? ''; ?>">
 
             <input type="password" name="nova_senha" placeholder="Digite a nova senha" required>
+            <input type="password" name="confirma_senha" placeholder="Confirme a nova senha" required>
             <button class="btnRedefinir" type="submit" data-tts="Redefinir Senha">Redefinir Senha</button>
         </form>
 

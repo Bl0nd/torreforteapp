@@ -1084,7 +1084,6 @@ footer {
 /*#region 11 EDITAR CARRO  */
 
 .body_cadastro.page-editar-carro {
-  /* Garante centralização vertical e horizontal */
   padding-top: 100px;
   display: flex;
   justify-content: center;
@@ -1092,7 +1091,6 @@ footer {
   min-height: 100vh;
 }
 
-/* Alinha o botão voltar abaixo do header fixo */
 .body_cadastro.page-editar-carro .btn-voltar {
   /* position: absolute;
   top: 110px; */
@@ -1112,11 +1110,7 @@ footer {
   z-index: 10;
 }
 
-/*
- * 2. Estilo para o CONTAINER (Nova classe para isolar)
- */
 .editar-carro-container {
-  /* Replica os estilos de formulário dark mode */
   background-color: rgba(15, 15, 15, 0.85);
   border: 3px solid #555;
   border-radius: 12px;
@@ -1130,9 +1124,6 @@ footer {
   margin: 20px auto;
 }
 
-/*
- * 3. Estilo para o TÍTULO
- */
 .editar-carro-container h2 {
   color: #EB9719;
   font-size: 2.2em;
@@ -1142,9 +1133,6 @@ footer {
   text-transform: uppercase;
 }
 
-/*
- * 4. Estilo para LABELS e FORM
- */
 .editar-carro-form {
   display: flex;
   flex-direction: column;
@@ -1159,9 +1147,6 @@ footer {
   color: #C9B89F;
 }
 
-/*
- * 5. Estilo para CAMPOS DE ENTRADA (Input[text] e Select)
- */
 .editar-carro-form input[type="text"],
 .editar-carro-form select {
   width: 100%;
@@ -1176,7 +1161,6 @@ footer {
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-/* Foco nos campos */
 .editar-carro-form input:focus,
 .editar-carro-form select:focus {
   border-color: #EB9719;
@@ -1184,7 +1168,6 @@ footer {
   box-shadow: 0 0 5px #EB9719;
 }
 
-/* Estilo específico para o SELECT (corrigindo a seta) */
 .editar-carro-form select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1195,9 +1178,6 @@ footer {
   background-size: 12px auto;
 }
 
-/*
- * 6. Estilo para o BOTÃO SALVAR (Nova classe para consistência)
- */
 .editar-carro-form .btn-salvar-edicao {
   width: 100%;
   padding: 15px;
@@ -1218,8 +1198,6 @@ footer {
   transform: translateY(5px);
   box-shadow: 0 0 #993300;
 }
-
-/*OBS: utilizada a mesma estrutura CSS do CADASTRO CARRO*/
 
 /*#endregion 11 EDITAR CARRO ************************************ */
 

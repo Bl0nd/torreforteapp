@@ -24,16 +24,19 @@
         <div class="historico-lista">
             <?php if (!empty($dados['historicos'])): ?>
                 <?php foreach ($dados['historicos'] as $historico): ?>
-                    <?php if ($historico['status_agendamento'] === 'Concluido' || $historico['status_agendamento'] === 'Pendente' || $historico['status_agendamento'] === 'Cancelado'): ?>
+                    <?php if (in_array($historico['status_agendamento'], ['Concluido', 'Pendente', 'Cancelado'])): ?>
                         <div class="historico-item" data-status="<?= $historico['status_agendamento'] ?>">
                             <p><strong>Modelo do Veículo:</strong> <?= $historico['modelo_veiculo'] ?></p>
                             <p><strong>Placa do Veículo:</strong> <?= $historico['placa_veiculo'] ?></p>
-                            <p><strong>Tipo de Serviço:</strong> <?= $historico['tipo_servico'] ?></p>
+                            <p><strong>Tipo de Serviço:</strong> <?= $historico['nome_servico'] ?></p>
                             <p><strong>Descrição:</strong> <?= $historico['descricao_agendamento'] ?? 'Sem descrição' ?></p>
                             <p><strong>Status:</strong> <?= $historico['status_agendamento'] ?></p>
                             <p><strong>Data Agendada:</strong> <?= $historico['data_agendada'] ?></p>
                             <p><strong>Valor:</strong>
-                                <?php if ($historico['status_agendamento'] === 'Concluido' && !empty($historico['preco_base_servico']) && is_numeric($historico['preco_base_servico'])) {
+                                <?php 
+                                if ($historico['status_agendamento'] === 'Concluido' && 
+                                    !empty($historico['preco_base_servico']) && 
+                                    is_numeric($historico['preco_base_servico'])) {
                                     echo 'R$ ' . number_format($historico['preco_base_servico'], 2, ',', '.');
                                 } else {
                                     echo '-';
@@ -42,20 +45,28 @@
                             </p>
 
                             <?php if ($historico['status_agendamento'] === 'Concluido'): ?>
-                                <a href="<?= URL_BASE; ?>index.php?url=avaliar&id=<?= $historico['id_agendamento'] ?? 0 ?>" class="btn-avaliar"><i class="uil uil-star"></i> Avaliar Serviço</a>
+                                <?php if (!empty($historico['pode_comentar']) && $historico['pode_comentar']): ?>
+                                    <a href="<?= URL_BASE; ?>index.php?url=avaliar&id=<?= $historico['id_agendamento'] ?? 0 ?>" class="btn-avaliar">
+                                        <i class="uil uil-star"></i> Avaliar Serviço
+                                    </a>
+                                <?php else: ?>
+                                    <span class="btn-avaliar-disabled">
+                                        <i class="uil uil-check-circle"></i> Avaliação já enviada
+                                    </span>
+                                <?php endif; ?>
                             <?php endif; ?>
                         </div>
                     <?php endif; ?>
                 <?php endforeach; ?>
             <?php else: ?>
-                <p><?= $dados['mensagem'] ?? 'Nenhum histórico' ?></p>
+                <p><?= $dados['mensagem'] ?? 'Nenhum histórico encontrado' ?></p>
             <?php endif; ?>
         </div>
     </section>
 
     <?php require_once('template/footer.php') ?>
 
-    <script src="assets/js/script.js"> </script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
